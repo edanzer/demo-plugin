@@ -21,7 +21,7 @@
  * 
  */
 import './index.scss';
-import './style.css';
+import './style.scss';
 
 /*
  * Import JS
