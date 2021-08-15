@@ -1,11 +1,11 @@
 {
-    "name": "Demo Plugin",
+    "name": "edanzer/demo-plugin",
     "description": "A resource plugins with code snippets for common plugin tasks.",
     "license": "GPL2+",
     "type": "project",
     "authors": [
         {
-            "name": "Erick Danzer",
+            "name": "Erick Danzer"
         }
     ],
     "minimum-stability": "dev",
@@ -13,6 +13,6 @@
     "autoload": {
         "psr-4": {
             "demo_plugin\\": "./"
-        },
+        }
     }
 }
