@@ -1,0 +1,18 @@
+{
+    "name": "My Plugin",
+    "description": "A simple WordPress plugin boilerplate.",
+    "license": "GPL2+",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Erick Danzer",
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "my_plugin\\": "./"
+        },
+    }
+}
