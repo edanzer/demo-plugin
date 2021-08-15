@@ -1,7 +1,7 @@
 {
-  "name": "my-plugin",
+  "name": "demo-plugin",
   "version": "1.0.0",
-  "description": "A simple WordPress plugin boilerplate.",
+  "description": "A resource plugins with code snippets for common plugin tasks.",
   "main": "index.js",
   "scripts": {
     "build": "wp-scripts build",

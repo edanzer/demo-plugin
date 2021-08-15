@@ -1,6 +1,6 @@
 {
-    "name": "My Plugin",
-    "description": "A simple WordPress plugin boilerplate.",
+    "name": "Demo Plugin",
+    "description": "A resource plugins with code snippets for common plugin tasks.",
     "license": "GPL2+",
     "type": "project",
     "authors": [
@@ -12,7 +12,7 @@
     "require": {},
     "autoload": {
         "psr-4": {
-            "my_plugin\\": "./"
+            "demo_plugin\\": "./"
         },
     }
 }

@@ -1,24 +1,24 @@
 <?php
 
-namespace my_plugin;
+namespace demo_plugin;
 
 /**
  * The main plugin file.
  * 
- * @package     My Plugin
+ * @package     Demo Plugin
  * @author      Erick Danzer
  * @license     GPL2+
  *
  * @wordpress-plugin
- * Plugin Name:       My Plugin
- * Plugin URI:        www.example.com
+ * Plugin Name:       Demo Plugin
+ * Plugin URI:        www.erickdanzer.com
  * Description:       A short description of what the plugin does. 
  * Version:           1.0.0
  * Author:            Erick Danzer
  * Author URI:        www.erickdanzer.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       my-plugin
+ * Text Domain:       demo-plugin
  * Domain Path:       /languages
  */
 
@@ -30,13 +30,13 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Defined constant for plugin version.
  */
-define( 'MY_PLUGIN_VERSION', '1.0.0' );
+define( 'DEMO_PLUGIN_VERSION', '1.0.0' );
 
 /**
  * Define constants for plugin root path and url.
  */
-define( 'MY_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-define( 'MY_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'DEMO_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+define( 'DEMO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 
 /**
  * Require composer autoload.php. 
@@ -49,7 +49,7 @@ require_once MY_PLUGIN_DIR . '/vendor/autoload.php';
 /* 
  * Define main plugin class
  */
-class My_Plugin {
+class Demo_Plugin {
 
     /* 
      * Plugin constructor functions. Runs immediately when plugin is loaded.
@@ -129,4 +129,4 @@ class My_Plugin {
 
 }
 
-new My_Plugin();
+new Demo_Plugin();
