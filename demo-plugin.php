@@ -1,6 +1,6 @@
 <?php
 
-namespace demo_plugin;
+namespace dp;
 
 /**
  * The main plugin file.
@@ -26,10 +26,10 @@ namespace demo_plugin;
 defined( 'ABSPATH' ) || exit;
 
 // Define constants
-define( 'DEMO_PLUGIN_VERSION', '1.0.0' );
-define( 'DEMO_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
-define( 'DEMO_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
-define( 'DEMO_PLUGIN_DEV_MODE', false );
+define( 'DP_VERSION', '1.0.0' );
+define( 'DP_PATH', plugin_dir_path( __FILE__ ) );
+define( 'DP_URL', plugin_dir_url( __FILE__ ) );
+define( 'DP_DEV_MODE', false );
 
 /**
  * Require composer autoload.php. 
@@ -37,11 +37,11 @@ define( 'DEMO_PLUGIN_DEV_MODE', false );
  * Note that the plugin uses the PSR-4 autoloading standard, which imposes very specific
  * rules for organizing and naming files and classes to ensure autoloading works. 
  */
-require_once DEMO_PLUGIN_PATH . '/vendor/autoload.php';
+require_once DP_PATH . '/vendor/autoload.php';
 
 /**
  * Initailize plugin
  */
-if ( class_exists( '\demo_plugin\src\Init' ) ) {
-	\demo_plugin\src\Init::register_services();
+if ( class_exists( '\dp\src\Init' ) ) {
+	\dp\src\Init::register_services();
 }

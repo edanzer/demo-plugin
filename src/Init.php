@@ -1,6 +1,6 @@
 <?php
 
-namespace demo_plugin\src;
+namespace dp\src;
 
 /**
  * Exit if accessed directly.
