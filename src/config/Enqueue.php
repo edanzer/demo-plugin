@@ -7,10 +7,8 @@ namespace dp\src\config;
  */
 defined( 'ABSPATH' ) || exit;
 
-class Enqueue
-{
-	public function __construct() 
-	{
+class Enqueue {
+	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'frontend_assets' ) );
 		add_action( 'admin_enqueue_scripts', array( $this, 'admin_assets' ) );
 		add_action( 'enqueue_block_assets', array( $this, 'block_assets' ) );
@@ -20,8 +18,7 @@ class Enqueue
 	/**
      * Enqueue plugin frontend styles and scripts
      */
-	public function frontend_assets() 
-	{
+	public function frontend_assets() {
 		wp_register_style(
 			'demo-plugin-css',
 			DEMO_PLUGIN_URL . 'src/assets/min/frontend.min.css'
@@ -42,8 +39,7 @@ class Enqueue
 	/**
      * Enqueue plugin admin styles and scripts
      */
-	public function admin_assets() 
-	{
+	public function admin_assets() {
         wp_register_style(
 			'demo-plugin-admin-css',
 			DEMO_PLUGIN_URL . 'src/assets/min/admin.min.css'
@@ -59,15 +55,12 @@ class Enqueue
 
         wp_enqueue_style( 'demo-plugin-admin-css' );
         wp_enqueue_script( 'demo-plugin-admin-js' );
-
 	}
 
 	/**
 	 * Enqueue frontend block assets.
 	 */
-	public function block_assets() 
-	{
-
+	public function block_assets() {
         wp_register_style(
 			'demo-plugin-block-css',
 			DEMO_PLUGIN_URL . 'src/assets/min/frontend-block.min.css'
@@ -83,15 +76,12 @@ class Enqueue
 
         wp_enqueue_style( 'demo-plugin-block-css' );
         wp_enqueue_script( 'demo-plugin-admin-js' );
-
 	}
 
 	/**
 	 * Enqueue block editor only assets.
 	 */
-	public function block_editor_assets() 
-	{
-
+	public function block_editor_assets() {
         wp_register_style(
 			'demo-plugin-editor-css',
 			DEMO_PLUGIN_URL . 'src/assets/min/editor-block.min.css'
@@ -107,6 +97,5 @@ class Enqueue
 
         wp_enqueue_style( 'demo-plugin-editor-css' );
         wp_enqueue_script( 'demo-plugin-editor-js' );
-
 	}
 }

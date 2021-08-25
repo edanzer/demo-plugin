@@ -7,8 +7,7 @@ namespace dp\src;
  */
 defined( 'ABSPATH' ) || exit;
 
-final class Init
-{
+final class Init {
 	public static $services =  array(
 		config\Enqueue::class,
 		//pages\Settings::class,
@@ -19,8 +18,7 @@ final class Init
 	/**
 	 * Register and activate services
 	 */
-	public static function register_services() 
-	{
+	public static function register_services() {
 		foreach ( self::$services as $class ) {
             ( new $class );
 		}
