@@ -1,0 +1,1 @@
+!function(){"use strict";console.log("This should be output in the console on the frontend.")}();

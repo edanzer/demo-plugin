@@ -1,6 +1,6 @@
 <?php
 
-namespace dp\src;
+namespace my_plugin;
 
 /**
  * Exit if accessed directly.
@@ -10,9 +10,9 @@ defined( 'ABSPATH' ) || exit;
 final class Init {
 	public static $services =  array(
 		config\Enqueue::class,
+		blocks\Blocks::class
 		//pages\Settings::class,
-		//cpt\Recipe::class,
-		//blocks\Blocks::class,
+		//cpt\Recipe::class
 	);
         
 	/**

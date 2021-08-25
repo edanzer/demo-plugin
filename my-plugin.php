@@ -1,16 +1,14 @@
 <?php
 
-namespace dp;
-
 /**
  * The main plugin file.
  * 
- * @package     Demo Plugin
+ * @package     My Plugin
  * @author      Erick Danzer
  * @license     GPL2+
  *
  * @wordpress-plugin
- * Plugin Name:       Demo Plugin
+ * Plugin Name:       My Plugin
  * Plugin URI:        www.erickdanzer.com
  * Description:       A resource plugin with code snippets for common plugin tasks. 
  * Version:           1.0.0
@@ -18,7 +16,7 @@ namespace dp;
  * Author URI:        www.erickdanzer.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       demo-plugin
+ * Text Domain:       my-plugin
  * Domain Path:       /languages
  */
 
@@ -26,10 +24,10 @@ namespace dp;
 defined( 'ABSPATH' ) || exit;
 
 // Define constants
-define( 'DP_VERSION', '1.0.0' );
-define( 'DP_PATH', plugin_dir_path( __FILE__ ) );
-define( 'DP_URL', plugin_dir_url( __FILE__ ) );
-define( 'DP_DEV_MODE', false );
+define( 'MY_PLUGIN_VERSION', '1.0.0' );
+define( 'MY_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+define( 'MY_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+define( 'MY_PLUGIN_DEV_MODE', false );
 
 /**
  * Require composer autoload.php. 
@@ -37,11 +35,11 @@ define( 'DP_DEV_MODE', false );
  * Note that the plugin uses the PSR-4 autoloading standard, which imposes very specific
  * rules for organizing and naming files and classes to ensure autoloading works. 
  */
-require_once DP_PATH . '/vendor/autoload.php';
+require_once MY_PLUGIN_PATH . '/vendor/autoload.php';
 
 /**
  * Initailize plugin
  */
-if ( class_exists( '\dp\src\Init' ) ) {
-	\dp\src\Init::register_services();
+if ( class_exists( 'my_plugin\Init' ) ) {
+	my_plugin\Init::register_services();
 }
